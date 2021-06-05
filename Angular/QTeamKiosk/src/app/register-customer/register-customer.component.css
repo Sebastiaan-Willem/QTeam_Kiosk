@@ -1,0 +1,22 @@
+html {
+    width: 80%, auto;
+    margin: 0, auto;
+}
+
+
+.primary-color{
+    color: #e31d3c;
+}
+.secondary-color{
+    color: #eee;
+}
+.border {
+    border: 3rem solid #eee;
+    
+}
+
+/* ● red: #e31d3c;
+● grey: #eee;
+● white: #fff;
+● font: Montserrat (google font)
+● iconen van fontawesome */
