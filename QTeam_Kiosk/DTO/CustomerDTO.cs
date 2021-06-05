@@ -17,7 +17,7 @@ namespace QTeam_Kiosk.DTO
         public bool SubscribedToUpdates { get; set; }
 
         //Address stuff
-        public int AddressId { get; set; }
+        //public int AddressId { get; set; }
         public string Street { get; set; }
         public int HouseNumber { get; set; }
         public string Unit { get; set; }

@@ -52,8 +52,8 @@ namespace QTeam_Kiosk.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("AddressId")
-                        .HasColumnType("int");
+                    b.Property<string>("City")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
@@ -64,6 +64,9 @@ namespace QTeam_Kiosk.Migrations
                     b.Property<string>("Gender")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("HouseNumber")
+                        .HasColumnType("int");
+
                     b.Property<string>("LicencePlate")
                         .HasColumnType("nvarchar(max)");
 
@@ -73,25 +76,21 @@ namespace QTeam_Kiosk.Migrations
                     b.Property<int>("PhoneNumber")
                         .HasColumnType("int");
 
+                    b.Property<int>("PostalCode")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Street")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("SubscribedToUpdates")
                         .HasColumnType("bit");
 
+                    b.Property<string>("Unit")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("AddressId");
-
                     b.ToTable("Customers");
-                });
-
-            modelBuilder.Entity("QTeam_Kiosk.Entities.Customer", b =>
-                {
-                    b.HasOne("QTeam_Kiosk.Entities.Address", "Address")
-                        .WithMany()
-                        .HasForeignKey("AddressId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Address");
                 });
 #pragma warning restore 612, 618
         }

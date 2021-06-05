@@ -13,7 +13,7 @@ namespace QTeam_Kiosk.Services
     {
         private IMapper _mapper;
         private ICustomerRepository _customerRepo;
-        private IAddressRepository _addressRepo;
+        //private IAddressRepository _addressRepo;
 
         public CustomerService(IMapper mapper, ICustomerRepository repo)
         {
@@ -35,10 +35,12 @@ namespace QTeam_Kiosk.Services
         {
             //ADD AUTOMAPPER
             var customer = _mapper.Map<Customer>(dto);
-            var address = _mapper.Map<Address>(dto);
+            //var address = _mapper.Map<Address>(dto);
+
+            
 
             //add address repo
-            await _addressRepo.AddAddressAsync(address);
+            //await _addressRepo.AddAddressAsync(address);
             await _customerRepo.AddCustomerAsync(customer);
         }
     }

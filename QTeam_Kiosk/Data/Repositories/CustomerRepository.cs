@@ -19,14 +19,14 @@ namespace QTeam_Kiosk.Data.Repositories
         public async Task<List<Customer>> GetCustomersAsync()
         {
             return await _context.Customers
-                .Include(x => x.Address)
+                //.Include(x => x.Address)
                 .ToListAsync();
         }
 
         public async Task<Customer> GetCustomerAsync(int id)
         {
             return await _context.Customers
-                .Include(x => x.Address)
+                //.Include(x => x.Address)
                 .SingleOrDefaultAsync(x => x.Id == id);
         }
 
