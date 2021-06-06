@@ -13,9 +13,14 @@ namespace QTeam_Kiosk.Helpers
         public AutoMapperProfile()
         {
             CreateMap<Customer, CustomerDTO>()
+                .ForMember(dest => dest.City, opt => opt.MapFrom(src => src.Address.City))
+                .ForMember(dest => dest.Street, opt => opt.MapFrom(src => src.Address.Street))
+                .ForMember(dest => dest.HouseNumber, opt => opt.MapFrom(src => src.Address.HouseNumber))
+                .ForMember(dest => dest.PostalCode, opt => opt.MapFrom(src => src.Address.PostalCode))
+                .ForMember(dest => dest.Unit, opt => opt.MapFrom(src => src.Address.Unit))
                 .ReverseMap();
-            CreateMap<Address, CustomerDTO>()
-                .ReverseMap();
+
+            
         }
     }
 }

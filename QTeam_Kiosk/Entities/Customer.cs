@@ -14,14 +14,16 @@ namespace QTeam_Kiosk.Entities
         public string LicencePlate { get; set; }
         public string Email { get; set; }
         public int PhoneNumber { get; set; }
-        public string Street { get; set; }
-        public int HouseNumber { get; set; }
-        public string Unit { get; set; }
-        public string City { get; set; }
-        public int PostalCode { get; set; }
+
         public bool SubscribedToUpdates { get; set; }
 
-        //public int AddressId { get; set; }
-        //public Address Address { get; set; }
+        public int AddressId { get; set; }
+        public Address Address { get; set; }
+
+        //public string Street { get; set; }
+        //public int HouseNumber { get; set; }
+        //public string Unit { get; set; }
+        //public string City { get; set; }
+        //public int PostalCode { get; set; }
     }
 }
