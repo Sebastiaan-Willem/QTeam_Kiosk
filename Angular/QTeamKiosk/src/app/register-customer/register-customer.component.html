@@ -1,114 +1,134 @@
-<div class="border">
+<div class="border content">
     <div class="img-responsive pull-right">
         <img src="../../assets/Images/logo.png" alt="banner"/>
     </div>
 
-    <form [formGroup]="registerUser" (ngSubmit)="register()" autocomplete="on">
-        <h2 class="text-center red">VUL UW GEGEVENS AAN</h2>
-
-        <div class="form-group">
-            <input type="radio" class="" value="Male" formControlName="gender"/>
-            <span>Dhr.</span>     
-            <input type="radio" class="" value="Female" formControlName="gender"/>
-            <span>Mevr.</span>        
-        </div>    
-
-        <div class="form-group">
-            <input type="text" [class.is-invalid]="registerUser.get('firstName')?.errors 
-                                    && registerUser.get('firstName')?.touched" class="form-control" formControlName="firstName"
-                placeholder="Voornaam" />
-            <div class="invalid-feedback">Gelieve uw voornaam in te vullen.</div>
-        </div>
-
-        <div class="form-group">
-            <input type="text" [class.is-invalid]="registerUser.get('name')?.errors 
-                                    && registerUser.get('name')?.touched" class="form-control" formControlName="name"
-                placeholder="Naam" />
-            <div class="invalid-feedback">Gelieve uw naam in te vullen.</div>
-        </div>
-
-        <div class="form-group">
-            <input type="text" [class.is-invalid]="registerUser.get('licencePlate')?.errors 
-                                    && registerUser.get('licencePlate')?.touched" class="form-control" formControlName="licencePlate"
-                placeholder="Nummerplaat" />
-            <div class="invalid-feedback">Gelieve uw nummerplaat in te vullen.</div>
-        </div>
-
-        <div class="form-group">
-            <input type="email" [class.is-invalid]="registerUser.get('email')?.errors 
-                                    && registerUser.get('email')?.touched" class="form-control" formControlName="email"
-                placeholder="Email" />
-            <div class="invalid-feedback">Gelieve uw e-mail adres in te vullen.</div>
-        </div>
-
-        <div class="form-group">
-            <input type="text" [class.is-invalid]="registerUser.get('street')?.errors 
-                                    && registerUser.get('street')?.touched" class="form-control" formControlName="street"
-                placeholder="Straat" />
-            <div class="invalid-feedback">Gelieve uw straat in te vullen.</div>
-        </div>
-
-        <div class="form-group">
-            <input type="number" [class.is-invalid]="registerUser.get('houseNumber')?.errors 
-                                    && registerUser.get('houseNumber')?.touched" class="form-control" formControlName="houseNumber"
-                placeholder="Nummer" />
-            <div class="invalid-feedback">Gelieve uw huisnummer in te vullen.</div>
-        </div>
-
-        <div class="form-group">
-            <input type="text" [class.is-invalid]="registerUser.get('unit')?.errors 
-                                    && registerUser.get('unit')?.touched" class="form-control" formControlName="unit"
-                placeholder="Bus" />
-            <div class="invalid-feedback">Gelieve uw bus in te vullen.</div>
-        </div>
-        <div class="form-group">
-            <input type="text" [class.is-invalid]="registerUser.get('city')?.errors 
-                                    && registerUser.get('city')?.touched" class="form-control" formControlName="city"
-                placeholder="Stad" />
-            <div class="invalid-feedback">Gelieve uw stad in te vullen.</div>
-        </div>
-
-        <div class="form-group">
-            <input type="number" [class.is-invalid]="registerUser.get('postalCode')?.errors 
-                                    && registerUser.get('postalCode')?.touched" class="form-control" formControlName="postalCode"
-                placeholder="Postcode" />
-            <div class="invalid-feedback">Gelieve uw postcode in te vullen.</div>
-        </div>
-
-        <div class="form-group">
-            <input type="number" [class.is-invalid]="registerUser.get('phoneNumber')?.errors 
-                                    && registerUser.get('phoneNumber')?.touched" class="form-control" formControlName="phoneNumber"
-                placeholder="Telefoon" />
-            <div class="invalid-feedback">Gelieve uw telefoon nummer in te vullen.</div>
-        </div>
-        <div class="form-group">
-            <input type="checkbox" class="" formControlName="subscribedToUpdates"/>
-            <span>Hou mij op de hoogte wanneer er interessante acties zijn bij Q Team</span>
-        </div>
-
-        <!-- <div class="form-group">
-            <input type="password" [class.is-invalid]="registerUser.get('password')?.errors 
-                                    && registerUser.get('password')?.touched" class="form-control"
-                formControlName="password" placeholder="Password" />
-            <div *ngIf="registerUser.get('password')?.hasError('required')" class="invalid-feedback">Please enter a password</div>
-            <div *ngIf="registerUser.get('password')?.hasError('minlength')" class="invalid-feedback">Password must be at least 4 characters</div>
-            <div *ngIf="registerUser.get('password')?.hasError('maxlength')" class="invalid-feedback">Password can not be longer than 8 characters</div>
-
-            <div *ngIf="validationErrors.length > 0">
-                <ul class="text-danger">
-                    <li *ngFor="let error of validationErrors">
-                        {{ error }}
-                    </li>
-                </ul>
+    <div>
+        <form [formGroup]="registerUser" (ngSubmit)="register()" autocomplete="on">
+            
+            <h2 class="text-center primary-color title"><span class="italic">VUL UW</span> GEGEVENS AAN</h2>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="radio" class="" value="Male" formControlName="gender"/>
+                    <span class="gender-margin">Dhr.</span>     
+                    <input type="radio" class="" value="Female" formControlName="gender"/>
+                    <span class="gender-margin">Mevr.</span>        
+                </div> 
             </div>
-        </div> -->
+            <div class="form-row">
+                <div class="col-md-6">
+                    <div class="form-group ">
+                        <input type="text" [class.is-invalid]="registerUser.get('firstName')?.errors 
+                                                && registerUser.get('firstName')?.touched" class="form-control" formControlName="firstName"
+                            placeholder="Voornaam" />
+                        <div class="invalid-feedback">Gelieve uw voornaam in te vullen.</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" [class.is-invalid]="registerUser.get('name')?.errors 
+                                                && registerUser.get('name')?.touched" class="form-control" formControlName="name"
+                            placeholder="Naam" />
+                        <div class="invalid-feedback">Gelieve uw naam in te vullen.</div>
+                    </div>
+                </div>
+            </div>           
 
-        <div class="form-group text-center">
-            <button class="btn btn-danger mr-2" type="submit">Bevestigen</button>
-        </div>
+            
 
+            <div class="form-group form-row">
+                <input type="text" [class.is-invalid]="registerUser.get('licencePlate')?.errors 
+                                        && registerUser.get('licencePlate')?.touched" class="form-control" formControlName="licencePlate"
+                    placeholder="Nummerplaat" />
+                <div class="invalid-feedback">Gelieve uw nummerplaat in te vullen.</div>
+            </div>
+
+            <div class="form-group form-row">
+                <input type="email" [class.is-invalid]="registerUser.get('email')?.errors 
+                                        && registerUser.get('email')?.touched" class="form-control" formControlName="email"
+                    placeholder="Email" />
+                <div class="invalid-feedback">Gelieve uw e-mail adres in te vullen.</div>
+            </div>
+
+            <div class="form-group form-row">
+                <input type="text" [class.is-invalid]="registerUser.get('street')?.errors 
+                                        && registerUser.get('street')?.touched" class="form-control" formControlName="street"
+                    placeholder="Straat" />
+                <div class="invalid-feedback">Gelieve uw straat in te vullen.</div>
+            </div>
+
+            <div class="form-row">
+                    <div class="form-group  col-md-6">
+                        <input type="number" [class.is-invalid]="registerUser.get('houseNumber')?.errors 
+                                                && registerUser.get('houseNumber')?.touched" class="form-control" formControlName="houseNumber"
+                            placeholder="Nummer" />
+                        <div class="invalid-feedback">Gelieve uw huisnummer in te vullen.</div>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <input type="text" [class.is-invalid]="registerUser.get('unit')?.errors 
+                                                && registerUser.get('unit')?.touched" class="form-control" formControlName="unit"
+                            placeholder="Bus" />
+                        <div class="invalid-feedback">Gelieve uw bus in te vullen.</div>
+                    </div>                
+            </div>    
+            <div class="form-row">
+                           
+                    <div class="form-group col-md-6">
+                        <input type="text" [class.is-invalid]="registerUser.get('city')?.errors 
+                                                && registerUser.get('city')?.touched" class="form-control" formControlName="city"
+                            placeholder="Stad" />
+                        <div class="invalid-feedback">Gelieve uw stad in te vullen.</div>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <input type="number" [class.is-invalid]="registerUser.get('postalCode')?.errors 
+                                                && registerUser.get('postalCode')?.touched" class="form-control" formControlName="postalCode"
+                            placeholder="Postcode" />
+                        <div class="invalid-feedback">Gelieve uw postcode in te vullen.</div>
+                    </div>
+               
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="number" [class.is-invalid]="registerUser.get('phoneNumber')?.errors 
+                                            && registerUser.get('phoneNumber')?.touched" class="form-control" formControlName="phoneNumber"
+                        placeholder="Telefoon" />
+                    <div class="invalid-feedback">Gelieve uw telefoon nummer in te vullen.</div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="checkbox" class="" formControlName="subscribedToUpdates"/>
+                    <span class="gender-margin">Hou mij op de hoogte wanneer er interessante acties zijn bij Q Team</span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group text-center">
+                    <button class="btn btn-danger mr-2" type="submit">Bevestigen</button>
+                </div>
+            </div>
+        </form>
         <div class="img-responsive center">
             <img src="../../assets/Images/banner.png" alt="banner"/>
         </div>
-    </form>
+    </div>  
 </div>
+
+ <!-- <div class="form-group">
+                <input type="password" [class.is-invalid]="registerUser.get('password')?.errors 
+                                        && registerUser.get('password')?.touched" class="form-control"
+                    formControlName="password" placeholder="Password" />
+                <div *ngIf="registerUser.get('password')?.hasError('required')" class="invalid-feedback">Please enter a password</div>
+                <div *ngIf="registerUser.get('password')?.hasError('minlength')" class="invalid-feedback">Password must be at least 4 characters</div>
+                <div *ngIf="registerUser.get('password')?.hasError('maxlength')" class="invalid-feedback">Password can not be longer than 8 characters</div>
+
+                <div *ngIf="validationErrors.length > 0">
+                    <ul class="text-danger">
+                        <li *ngFor="let error of validationErrors">
+                            {{ error }}
+                        </li>
+                    </ul>
+                </div>
+            </div> -->
