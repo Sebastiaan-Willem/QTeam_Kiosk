@@ -6,9 +6,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,800;1,800&display=swap');
 
-/* body{
-    font-family: 'Montserrat';
-} */
 
 .content{
     font-family: 'Montserrat', sans-serif;
@@ -20,26 +17,35 @@
     font-style: italic;
 }
 
+.bold{
+    font-weight: bold;
+}
+
 .primary-color{
     color: #e31d3c;
 }
 .secondary-color{
     color: #eee;
 }
-.border {
-    border-width: 20px;
-    border: 20px solid #eee;    
+.content-border {
+    border: 5px solid #eee;    
 }
 
 .btn-danger{
     background-color: #e31d3c;
     font-weight: bold;
-    padding: 1.5rem, 0;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.logo-padding{
+    padding: 15px;
 }
 
 .title{
     font-size: 4rem;
     font-weight: bold;
+    margin-top: 1.5rem;
 }
 
 .gender-margin{
@@ -50,5 +56,7 @@
 .form-row{
     margin: 1.5rem;
 }
-
+.center {
+    margin: auto;
+}
 

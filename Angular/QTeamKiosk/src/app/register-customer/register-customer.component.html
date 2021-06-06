@@ -1,19 +1,21 @@
-<div class="border content">
-    <div class="img-responsive pull-right">
-        <img src="../../assets/Images/logo.png" alt="banner"/>
+<div class="content-border content">
+    <div class="row">
+        <div class="img-fluid d-flex justify-content-end ">
+            <img src="../../assets/Images/logo.png" class="logo-padding" alt="banner"/>
+        </div>
     </div>
 
     <div>
+        
+        <h2 class="text-center primary-color title"><span class="italic">VUL UW</span> GEGEVENS AAN</h2>
         <form [formGroup]="registerUser" (ngSubmit)="register()" autocomplete="on">
-            
-            <h2 class="text-center primary-color title"><span class="italic">VUL UW</span> GEGEVENS AAN</h2>
             
             <div class="form-row">
                 <div class="form-group">
                     <input type="radio" class="" value="Male" formControlName="gender"/>
-                    <span class="gender-margin">Dhr.</span>     
+                    <span class="gender-margin bold">Dhr.</span>     
                     <input type="radio" class="" value="Female" formControlName="gender"/>
-                    <span class="gender-margin">Mevr.</span>        
+                    <span class="gender-margin bold">Mevr.</span>        
                 </div> 
             </div>
             <div class="form-row">
@@ -110,25 +112,11 @@
                 </div>
             </div>
         </form>
-        <div class="img-responsive center">
+        <div class="img-fluid center">
             <img src="../../assets/Images/banner.png" alt="banner"/>
         </div>
     </div>  
 </div>
 
- <!-- <div class="form-group">
-                <input type="password" [class.is-invalid]="registerUser.get('password')?.errors 
-                                        && registerUser.get('password')?.touched" class="form-control"
-                    formControlName="password" placeholder="Password" />
-                <div *ngIf="registerUser.get('password')?.hasError('required')" class="invalid-feedback">Please enter a password</div>
-                <div *ngIf="registerUser.get('password')?.hasError('minlength')" class="invalid-feedback">Password must be at least 4 characters</div>
-                <div *ngIf="registerUser.get('password')?.hasError('maxlength')" class="invalid-feedback">Password can not be longer than 8 characters</div>
 
-                <div *ngIf="validationErrors.length > 0">
-                    <ul class="text-danger">
-                        <li *ngFor="let error of validationErrors">
-                            {{ error }}
-                        </li>
-                    </ul>
-                </div>
-            </div> -->
+            
